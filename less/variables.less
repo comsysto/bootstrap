@@ -38,9 +38,21 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             #00A9BE;
 @linkColorHover:        darken(@linkColor, 15%);
 
+
+/* FONTS */
+@font-face {
+  font-family: 'AmaranthBold';
+  src: url('../amaranth-fontfacekit/Amaranth-Bold-webfont.eot');
+  src: url('../amaranth-fontfacekit/Amaranth-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../amaranth-fontfacekit/Amaranth-Bold-webfont.woff') format('woff'),
+  url('../amaranth-fontfacekit/Amaranth-Bold-webfont.ttf') format('truetype'),
+  url('../amaranth-fontfacekit/Amaranth-Bold-webfont.svg#AmaranthBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 // Typography
 // -------------------------
@@ -50,8 +62,10 @@
 
 @baseFontSize:          14px;
 @baseFontFamily:        @sansFontFamily;
+@headFontFamily:        "AmaranthBold", Helvetica, Arial, sans-serif;
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
+@textColor:             @gray;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
@@ -143,7 +157,7 @@
 // Try to avoid customizing these :)
 @zindexDropdown:          1000;
 @zindexPopover:           1010;
-@zindexTooltip:           1030;
+@zindexTooltip:           1020;
 @zindexFixedNavbar:       1030;
 @zindexModalBackdrop:     1040;
 @zindexModal:             1050;
@@ -181,14 +195,14 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
+@navbarBackgroundHighlight:       @linkColorHover;
+@navbarBackground:                @linkColor;
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
-@navbarText:                      #777;
-@navbarLinkColor:                 #777;
-@navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @gray;
+@navbarText:                      @white;
+@navbarLinkColor:                 @white;
+@navbarLinkColorHover:            @white;
+@navbarLinkColorActive:           @white;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
 

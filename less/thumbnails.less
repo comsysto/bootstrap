@@ -47,7 +47,57 @@ a.thumbnail:focus {
   margin-left: auto;
   margin-right: auto;
 }
+
 .thumbnail .caption {
   padding: 9px;
-  color: @gray;
+  color: @white;
+  background-color: @linkColor;
+  position: relative;
+  min-height: 40px;
+  max-height: 40px;
+}
+
+.thumbnail .caption .text {
+  height: 30px;
+  width: 110px;
+  vertical-align: middle;
+  display: table-cell
+}
+
+.thumbnail .disturber {
+  position: relative;
+}
+
+.thumbnail .disturber img.disturber {
+  left: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 900;
+  max-width: 60%;
+
+}
+
+.thumbnail .disturber .price {
+  color: @white;
+  font-size: @baseFontSize + 4px;
+  font-weight: bold;
+  left: auto;
+  position: absolute;
+  right: 3px;
+  top: 8px;
+  z-index: 950;
+}
+
+.thumbnail .btn {
+  left: auto;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+.thumbnail .caption .wicket-ajax-indicator {
+  position: absolute;
+  right: 2px;
+  top: -20px;
 }
